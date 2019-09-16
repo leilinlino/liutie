@@ -1,5 +1,7 @@
 body{
 	width: 1000px;
 	height: 500px;
-	background-color: pink;
+	/*background-color: pink;*/
+	background-image: url('../../image/1.jpg');
+	background-repeat: no-repeat;
 }
