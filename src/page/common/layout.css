@@ -1,0 +1,89 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background-color:white;
+	font: 12px/1.5 tahoma,arial,"Microsoft YaHei", sans-serif;
+}
+li{
+	list-style: none;
+}
+img{
+	display: block;
+	border: none;
+}
+
+label{
+	cursor: pointer;
+}
+input [type = 'checkbox']{
+	cursor: pointer;
+}
+.fa-user{
+	color: pink;
+}
+.w{
+	width: 1080px;
+	margin: 0 auto;
+	position: relative;
+	overflow: hidden;
+}
+.link{
+	color: #999;
+	cursor: pointer;
+	text-decoration: none;
+}
+.link:hover{
+	color: blue;
+}
+.link-text{
+	color: #999;
+	text-decoration: none;
+}
+.btn{
+	display: inline-block;
+	padding: 0 20px;
+	height: 40px;
+	vertical-align: middle;
+	border: none;
+           background: #C60023;
+           font-size: 17px;
+           font-weight: bold;
+           color: #fff;
+           outline: none;
+           cursor: pointer;
+           text-decoration: none;
+}
+.btn-min{
+	 height: 25px;
+            line-height: 25px;
+            font-size: 12px;
+            padding: 0 10px;
+
+}
+/*.loading {
+	margin: 10px auto;
+           display: block;
+           width: 65px;
+           height: 65px;
+           border: 1px solid #ddd;
+           border-radius: 5px;
+           opacity: .5;
+           background: red;
+           background: url('../../image/icon/loading.gif');
+           background-image:url('big.jpg');
+           background:url('/c/Users/newuser/Desktop/myProject/src/image/icon/big.jpg');
+}*/
+
+/*  loading  默认加载 */
+.loading{
+	margin: 10px auto;
+	display: block;
+	width: 65px;
+	height: 65px;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	opacity: .5;
+	background: url("../../image/icon/loading.gif");
+}

@@ -6,6 +6,7 @@ var path = require('path');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
+var str = new Buffer('aHR0cDovL3Rlc3QuaGFwcHltbWFsbC5jb20v', 'base64');
 var WEBPACK_ENV = process.env.WEBPACK_ENV || 'dev';
 var getHtmlConfig = function (name) {
      return{
@@ -57,11 +58,17 @@ var config =  {
 		use:"css-loader"
 		})
 	        },
+		 
 
+	 //        {
+		// test:/\.(git|png|jpg|woff|svg|eot|ttf).??.*$/,
+		// loader: 'url-loader?limit=100&name=resource/[name].[ext]'
+	 //        }
 	        {
-		test:/\.(git|png|jpg|woff|svg|eot|ttf).??.*$/,
-		loader: 'url-loader?limit=100&name=resource/[name].[ext]'
-	}
+		
+		  test:/\.(gif|png|jpg|woff|svg|eot|ttf).??.*$/,
+		   loader: 'url-loader?limit=100&name=resource/[name].[ext]'
+	       }
          ]
 },
 
@@ -69,7 +76,23 @@ var config =  {
 	new ExtractTextPlugin("css/[name].css"),
 	new  HtmlWebpackPlugin(getHtmlConfig('index')),
 	new  HtmlWebpackPlugin(getHtmlConfig('user-login'))
-	]
+	],
+	resolve: {
+	        alias: {
+	        	util : path.resolve( __dirname , 'src/util'),
+	        	node_modules: path.resolve(__dirname,'node_modules')
+	        }
+	},
+	devServer: {
+		port: 8088,
+		inline: true,
+		proxy: {
+			"**/*.do": {
+				target: str.toString(),
+				changeOrigin: true
+			}
+		}
+	}
 }
 
 if ('dev' === WEBPACK_ENV){
