@@ -5,19 +5,10 @@
 <title><%= htmlWebpackPlugin.options.title %> -TMailStore电商平台</title>
 </head>
 <body>
-
-          <div>
-		<a class="link" href="">text</a>
-		<a class="link-text" href="">hhhhhh</a>
-	</div>
-	<div>
-		<a class="btn" href="">哈哈</a>
-		<a class="btn btn-min" href="">嘻嘻嘻嘻</a>
-	</div>
-	<div class="loading"></div>
-	<div>
-	   <i class="fa fa-user"></i>
-	</div>
+       
+<%= require('html-loader!./layout/nav-simple.html')%>
+            <%= require('html-loader!./layout/nav.html')%>
+           
            <%= require('html-loader!./layout/footer.html')%>
 </body>
 </html>

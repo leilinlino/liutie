@@ -1,6 +1,8 @@
 'use strict'
 require('./index.css');
 /*$('body').html("羊驼不是草泥马");*/
+require('@/common/nav-simple/index.js');
+require('@/common/nav/index.js');
 
 var _mm = require('util/mm.js');
 
@@ -16,10 +18,10 @@ var _mm = require('util/mm.js');
 });*/
 //console.log(_mm.getUrlParam('test'));
 
-var html = '<div>{{ data }}</div>'
+/*var html = '<div>{{ data }}</div>'
 
 var data = {
 	data:123
 }
 
-console.log(_mm.renderHtml(html,data));
+console.log(_mm.renderHtml(html,data));*/

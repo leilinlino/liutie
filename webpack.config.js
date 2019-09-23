@@ -80,7 +80,9 @@ var config =  {
 	resolve: {
 	        alias: {
 	        	util : path.resolve( __dirname , 'src/util'),
-	        	node_modules: path.resolve(__dirname,'node_modules')
+	        "@" :  path.resolve( __dirname , 'src/page'),
+	        	node_modules: path.resolve(__dirname,'node_modules'),
+	        	service : path.resolve( __dirname , 'src/service')
 	        }
 	},
 	devServer: {

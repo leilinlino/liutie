@@ -36,7 +36,7 @@ var _mm = {
 	},
 	//统一跳到登录页面
 	doLogin: function(){
-                     window.location.href = './use-login.html?redirect='  + 
+                     window.location.href = './user-login.html?redirect='  + 
                      encodeURIComponent( window.location.href);
 	},
 
