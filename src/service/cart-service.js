@@ -4,7 +4,7 @@ var _mm = require('util/mm.js');
 
 var _cart = {
 	getCartCount: function (resolve,reject) {
-		_mm.require({
+		_mm.request({
 			url: _mm.getServerUrl('/cart/get_cart_product_count.do'),
 		
 			success: resolve,

@@ -28,7 +28,7 @@ bindEvent: function(){
 },
 
 loadUserInfo: function(){
-	_user.ckeckLogin(function(res){
+	_user.checkLogin(function(res){
 		$('.user.not-login').hide().siblings('.user.login').show()
 	.find('.username').text('res.username')
 	},function(errMsg){

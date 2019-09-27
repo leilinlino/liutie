@@ -3,8 +3,16 @@ require('./index.css');
 /*$('body').html("羊驼不是草泥马");*/
 require('@/common/nav-simple/index.js');
 require('@/common/nav/index.js');
-
+require('@/common/header/index.js');
 var _mm = require('util/mm.js');
+
+ var navSide =  require('@/common/nav-side/index.js');
+
+ navSide.init({
+ 	name:'user-center'
+ });
+
+
 
 /*_mm.request({
 	//url: './test.do',
@@ -25,3 +33,4 @@ var data = {
 }
 
 console.log(_mm.renderHtml(html,data));*/
+
