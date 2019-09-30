@@ -20,9 +20,9 @@ label{
 input [type = 'checkbox']{
 	cursor: pointer;
 }
-.fa-user{
-	color: pink;
-}
+/*.fa-user{
+	color: green;
+}*/
 .w{
 	width: 1080px;
 	margin: 0 auto;

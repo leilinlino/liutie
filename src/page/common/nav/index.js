@@ -17,20 +17,25 @@ bindEvent: function(){
 
 	$('.js-login').click(function(){
 		_mm.doLogin();
+		console(123)
 	})
 	$('.js-register').click(function(){
 		window.location.href = './user-register.html';
 	})
-	$('.js-login').click(function(){
-		_user.logout();
+	$('.js-logout').click(function(){
+		_user.logout(function(res){
+			window.location.reload();
+		},function(errMsg){
+			_mm.errorTips(errMsg);
+		})
 	})
 
 },
 
 loadUserInfo: function(){
 	_user.checkLogin(function(res){
-		$('.user.not-login').hide().siblings('.user.login').show()
-	.find('.username').text('res.username')
+	$('.user.not-login').hide().siblings('.user.login').show()
+	.find('.username').text(res.username)
 	},function(errMsg){
 
 	});
@@ -39,10 +44,10 @@ loadUserInfo: function(){
 
 loadCartCount: function(){
 	_cart.getCartCount(function(res){
-		$('.nav.cart-count').text(res || 0)
+		$('.nav.cart-count').text(res || 0);
 
 	},function(errMsg){
-		$('.nav.cart-count').text(0)
+		$('.nav.cart-count').text(0);
 	});
 
       }

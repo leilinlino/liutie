@@ -8,9 +8,9 @@ var _mm = require('util/mm.js');
 
  var navSide =  require('@/common/nav-side/index.js');
 
- navSide.init({
+ /*navSide.init({
  	name:'user-center'
- });
+ });*/
 
 
 
